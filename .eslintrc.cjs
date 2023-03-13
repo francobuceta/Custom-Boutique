@@ -43,5 +43,6 @@ module.exports = {
     'simple-import-sort/imports': 'error',
     'simple-import-sort/exports': 'error',
     'comma-dangle': [2, 'always-multiline'],
+    'editor.codeActionsOnSave': { 'source.fixAll.eslint': true },
   },
 };
