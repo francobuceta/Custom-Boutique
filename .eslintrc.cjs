@@ -36,13 +36,10 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
-  plugins: ['react', 'prettier', 'simple-import-sort'],
+  plugins: ['prettier', 'simple-import-sort'],
   rules: {
-    'react/react-in-jsx-scope': 0,
     'linebreak-style': 0,
-    'simple-import-sort/imports': 'error',
-    'simple-import-sort/exports': 'error',
+    'react/react-in-jsx-scope': 0,
     'comma-dangle': [2, 'always-multiline'],
-    'editor.codeActionsOnSave': { 'source.fixAll.eslint': true },
   },
 };
