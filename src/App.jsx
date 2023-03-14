@@ -1,12 +1,11 @@
-import './App.css'
+import './App.css';
+import Navbar from './components/Navbar';
 
 function App() {
 
   return (
     <>
-      <div>
-        <h1 className='text-3xl font-bold underline'>Custom Boutique</h1>
-      </div>
+      <Navbar />
     </>
   )
 }
