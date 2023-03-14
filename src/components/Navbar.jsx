@@ -52,8 +52,8 @@ const Navbar = () => {
                                                 key={item.name}
                                                 href={item.href}
                                                 className={classNames(
-                                                    item.current ? 'navbar_textCurrent text-2xl' : 'text-black navbar_text',
-                                                    'rounded-md px-3 lg:px-10 py-2 text-xl font-medium'
+                                                    item.current ? 'navbar_textCurrent text-2xl' : 'text-black navbar_text text-xl',
+                                                    'rounded-md px-3 lg:px-10 py-2 font-medium'
                                                 )}
                                                 aria-current={item.current ? 'page' : undefined}
                                             >
