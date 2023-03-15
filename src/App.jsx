@@ -1,12 +1,12 @@
 import './App.css';
 import Navbar from './pages/Navbar';
-import CarouselContainer from "./pages/CarouselContainer";
+import Home from "./pages/Home";
 
 function App() {
   return (
     <>
       <Navbar />
-      <CarouselContainer />
+      <Home />
     </>
   )
 }
