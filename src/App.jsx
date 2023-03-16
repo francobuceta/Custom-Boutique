@@ -1,4 +1,5 @@
 import Instagram from './pages/Instagram';
+import Footer from './pages/Footer';
 // import Navbar from './pages/Navbar';
 // import Home from './pages/Home';
 
@@ -10,6 +11,7 @@ function App() {
       {/* <Navbar />
       <Home /> */}
       <Instagram />
+      <Footer />
     </section>
   );
 }
