@@ -9,8 +9,10 @@ module.exports = {
         alternative: '#F5F5F5',
       },
       screens: {
+        sm: '375px',
         md: '768px',
-        lg: '1440px',
+        lg: '1200px',
+        xl: '1440px',
       },
       fontFamily: {
         lato: ['Lato', 'sans-serif'],
