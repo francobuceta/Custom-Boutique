@@ -41,5 +41,7 @@ module.exports = {
     'linebreak-style': 0,
     'react/react-in-jsx-scope': 0,
     'comma-dangle': [2, 'always-multiline'],
+    'react/prop-types': 0,
+    'react/function-component-definition': 0,
   },
 };
