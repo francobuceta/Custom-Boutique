@@ -9,8 +9,8 @@ const Footer = () => (
       </h4>
       <div className="flex justify-between mt-[25.87px] md:mt-10">
         {
-        footerLinks.map((link) => (
-          <FooterLink href={link.href} img={link.img} />
+        footerLinks.map((link, index) => (
+          <FooterLink href={link.href} img={link.img} key={`footerLink-${index}`} />
         ))
        }
       </div>

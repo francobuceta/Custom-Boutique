@@ -43,5 +43,7 @@ module.exports = {
     'comma-dangle': [2, 'always-multiline'],
     'react/prop-types': 0,
     'react/function-component-definition': 0,
+    'react/no-array-index-key': 0,
+    'react/jsx-props-no-spreading': 0,
   },
 };
