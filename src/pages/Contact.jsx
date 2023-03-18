@@ -42,7 +42,7 @@ const Contact = () => {
                   Tienda nube
                 </p>
               </div>
-              <p className="font-normal pl-[39.52px] md:pl-[40px] mt-4 underline underline">custom15.mitiendanube.com/productos</p>
+              <p className="font-normal pl-[39.52px] md:pl-[40px] mt-4 underline">custom15.mitiendanube.com/productos</p>
             </a>
 
             <a
