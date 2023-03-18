@@ -59,7 +59,7 @@ const Contact = () => {
               </p>
             </a>
           </div>
-          <div className="flex items-center gap-[9.52px] mt-[27px] xl:mt-[38px] pl-[2px]">
+          <div className="flex items-center gap-[9.52px] mt-[27px] md:mt-[36px] xl:mt-[38px] pl-[2px]">
             <img src={Argentina} alt="FIFA World Champion flag" className="xl:w-[24px] xl:h-[24px]" />
             <p className="uppercase text-[15px] leading-[18px] italic font-bold">Envíos a todo el páis</p>
           </div>
