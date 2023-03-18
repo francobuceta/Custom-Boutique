@@ -1,50 +1,71 @@
 import { BsWhatsapp } from 'react-icons/bs';
+import { FaGlobe } from 'react-icons/fa';
 import SectionTitle from '../components/shared/SectionTitle';
 import storeImage from '../assets/images/store.png';
-import storeDesktopImage from '../assets/images/store-desktop.png';
-import blueStriped from '../assets/images/blue-striped.png';
+import storeDesktopImage from '../assets/images/store-desktop.png'; // Desktop and tablet
 import contactItems from '../constants/contactItems';
 import ContactItem from '../components/sections/contact/ContactItem';
 import Argentina from '../assets/images/AR-flag.png';
-import blueFlowerImage from '../assets/images/blue-flower.png';
+import blueFlowerMobile from '../assets/images/blue-flower-mobile.png';
+import blueFlowerTablet from '../assets/images/blue-flower-tablet.png';
+import blueFlowerDesktop from '../assets/images/blue-flower-desktop.png';
 import useMediaQuery from '../hooks/useMediaQuery';
 
 const Contact = () => {
   const isDesktop = useMediaQuery('(min-width: 1440px)');
+  const isTablet = useMediaQuery('(min-width: 768px)');
+
+  const flower = () => {
+    if (isDesktop) return blueFlowerDesktop;
+    if (isTablet) return blueFlowerTablet;
+    return blueFlowerMobile;
+  };
+
   return (
-    <section className="overflow-hidden relative flex flex-col justify-center pb-[83px] md:pb-[168px] xl:pb-[99px]">
+    <section className="overflow-hidden relative flex flex-col justify-center pb-[81px] md:pb-[79px] xl:pb-[99px]">
       <SectionTitle title="Contacto" />
-      <div className="px-[27px] xl:px-0 m-auto mt-[45px] flex flex-col md:flex-row justify-center md:gap-[23px] xl:gap-[72px]">
+      <div className="px-[27px] xl:px-0 m-auto mt-[26px] md:mt-[36px] xl:mt-[56px] flex flex-col xl:flex-row xl:items-center justify-center gap-[30px] md:gap-[37px] xl:gap-[72px]">
         <div className="relative">
-          <img src={isDesktop ? storeDesktopImage : storeImage} alt="Custom boutique store" className="z-[50] relative md:w-[318px] xl:w-auto md:h-[258px] xl:h-auto" />
-          <img src={blueStriped} alt="Blue striped decoration" className="min-w-[529px] min-h-[256px] absolute top-[55px] md:top-[155px] left-[77px] md:-left-[18px] xl:hidden" />
+          <img src={isTablet ? storeDesktopImage : storeImage} alt="Custom boutique store" className="z-[50] relative w-auto h-auto" />
         </div>
-        <div className="mt-[45px] md:mt-0 flex flex-col gap-7 relative">
-          {
+        <div>
+          <div className="flex flex-col md:flex-wrap xl:flex-nowrap md:max-h-[170px] xl:max-h-none gap-7 md:gap-[42px] xl:gap-[43px] relative">
+            {
           contactItems.map((item, index) => (
             <ContactItem key={`contact-item-${index}`} {...item} />
           ))
-        }
-          <div className="flex gap-[9.52px] items-start">
-            <div className="rounded-full p-1 bg-primary text-white w-[30px] h-[30px] grid place-content-center">
-              <BsWhatsapp />
-            </div>
-            <div className="text-[15px] leading-[18px] text-secondary">
-              <p className="font-bold uppercase mb-[18px]">
+          }
+            <a className="flex flex-col text-[16px] leading-[19px]" href="https://custom15.mitiendanube.com/productos/">
+              <div className="flex items-center gap-[9.52px] md:gap-[10px]">
+                <FaGlobe className="text-[26px] text-primary" />
+                <p className="font-bold uppercase text-secondary">
+                  Tienda nube
+                </p>
+              </div>
+              <p className="font-normal pl-[39.52px] md:pl-[40px] mt-4 underline underline">custom15.mitiendanube.com/productos</p>
+            </a>
+
+            <a
+              className="flex gap-[9.52px] items-center"
+              href={import.meta.env.VITE_WHATSAPP_MESSAGE}
+            >
+              <div className="rounded-full p-1 bg-primary text-white w-[26px] h-[26px] grid place-content-center">
+                <BsWhatsapp />
+              </div>
+              <p className="font-bold uppercase text-[16px] leading-[19px] text-secondary">
                 WHATSAPP
                 {' '}
-                <span className="font-normal">(información y ventas)</span>
+                <span className="font-normal normal-case mt-4">(información y ventas)</span>
               </p>
-              <p className="font-normal">+54 9 2915 66-1652</p>
-            </div>
+            </a>
           </div>
-          <div className="flex items-center gap-[9.52px]">
+          <div className="flex items-center gap-[9.52px] mt-[27px] xl:mt-[38px] pl-[2px]">
             <img src={Argentina} alt="FIFA World Champion flag" className="xl:w-[24px] xl:h-[24px]" />
             <p className="uppercase text-[15px] leading-[18px] italic font-bold">Envíos a todo el páis</p>
           </div>
         </div>
       </div>
-      <img src={blueFlowerImage} alt="Blue flower decoration" className="flex md:hidden xl:flex absolute opacity-80 -bottom-[93px] -right-[135px] xl:-right-[60px] xl:bottom-[5px] rotate-[-26.5deg] xl:rotate-[2.94deg]" />
+      <img src={flower()} alt="Blue flower decoration" className="flex absolute -bottom-5 md:-bottom-8 xl:-bottom-12 right-0" />
     </section>
   );
 };
