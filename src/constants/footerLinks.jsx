@@ -4,15 +4,15 @@ import tiktokImg from '../assets/images/foot-tiktok.png';
 
 const footerLinks = [
   {
-    href: 'https://somelink.com',
+    href: 'https://www.instagram.com/custombouti/',
     img: instagramImg,
   },
   {
-    href: 'https://somelink.com',
+    href: 'https://www.facebook.com/profile.php?id=100083202024622',
     img: facebookImg,
   },
   {
-    href: 'https://somelink.com',
+    href: 'https://www.tiktok.com/@custombahiablanca',
     img: tiktokImg,
   },
 ];
