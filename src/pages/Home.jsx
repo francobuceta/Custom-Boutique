@@ -89,7 +89,7 @@ const Home = () => {
 
             </section>
 
-            <section className="container mx-auto px-4">
+            <section className="container mx-auto px-4 w-full max-w-[1600px] flex justify-center">
                 <Banner />
             </section>
 
