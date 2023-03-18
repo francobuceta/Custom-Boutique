@@ -28,14 +28,16 @@ const Carousel = ({ width, height, array } ) => {
 
                 {/* Left Arrow */}
 
-                <div className="absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl p-2 text-stone-500 cursor-pointer">
-                    <HiOutlineArrowLeft size={30} onClick={prevSlide} />
+                <div className="absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 
+                    text-2xl p-2 text-stone-500 rounded-full bg-black/20 cursor-pointer" onClick={prevSlide}>
+                    <HiOutlineArrowLeft size={30} color={"#ffffff"} />
                 </div>
 
                 {/* Right Arrow */}
 
-                <div className="absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-2xl p-2 text-stone-500 cursor-pointer">
-                    <HiOutlineArrowRight size={30} onClick={nextSlide} />
+                <div className="absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 
+                    text-2xl p-2 text-stone-500 rounded-full bg-black/20 cursor-pointer" onClick={nextSlide}>
+                    <HiOutlineArrowRight size={30} color={"#ffffff"} />
                 </div>
 
             </div>

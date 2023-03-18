@@ -33,7 +33,7 @@ const igImages = [
 function Instagram() {
   const isDesktop = useMediaQuery('(min-width: 1440px)');
   return (
-    <section>
+    <section id="instagram">
       <SectionTitle title="Instagram" />
       <div className="px-[21px] w-full mt-[23.79px]">
         {/* Show only on desktop */}

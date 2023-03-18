@@ -6,10 +6,10 @@ import logo from "../assets/logo.png";
 const Navbar = () => {
 
     const navigation = [
-        { name: 'Inicio', href: 'home' },
-        { name: 'Instagram', href: '#' },
-        { name: 'Promociones', href: '#' },
-        { name: 'Contacto', href: '#' },
+        { name: 'INICIO', href: 'home' },
+        { name: 'INSTAGRAM', href: 'instagram' },
+        { name: 'PROMOCIONES', href: '#' },
+        { name: 'CONTACTO', href: 'contact' },
     ]
 
     function classNames(...classes) {
@@ -47,17 +47,17 @@ const Navbar = () => {
                                     />
                                 </div>
                                 <div className="hidden sm:ml-6 sm:block">
-                                    <div className="flex space-x-4">
+                                    <div className="flex gap-4 space-x-4">
                                         {navigation.map((item) => (
                                             <Link
                                                 key={item.name}
                                                 href={item.href}
                                                 className={classNames(
-                                                    'text-black navbar_text text-xl rounded-md px-3 lg:px-10 py-2 font-medium'
+                                                    'text-black navbar_text text-xl rounded-md px-3 lg:px-10 py-2 font-bold w-52 flex justify-center'
                                                 )}
                                                 aria-current={item.current ? 'page' : undefined}
                                                 activeClass="navbar_textCurrent" smooth spy to={item.href} 
-                                                offset={item.href === "home" ? -500 : -100}
+                                                offset={item.href === "home" ? -200 : -200}
                                             >
                                                 {item.name}
                                             </Link>
