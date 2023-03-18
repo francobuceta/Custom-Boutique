@@ -1,5 +1,6 @@
-import Contact from './pages/Contact';
 import Instagram from './pages/Instagram';
+import Promotions from './pages/Promotions';
+import Contact from './pages/Contact';
 import Footer from './pages/Footer';
 import Navbar from './pages/Navbar';
 import Home from './pages/Home';
@@ -12,6 +13,7 @@ function App() {
       <Navbar />
       <Home />
       <Instagram />
+      <Promotions />
       <Contact />
       <Footer />
     </section>
