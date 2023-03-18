@@ -6,10 +6,10 @@ import logo from "../assets/logo.png";
 const Navbar = () => {
 
     const navigation = [
-        { name: 'Inicio', href: 'home' },
-        { name: 'Instagram', href: '#' },
-        { name: 'Promociones', href: '#' },
-        { name: 'Contacto', href: '#' },
+        { name: 'INICIO', href: 'home' },
+        { name: 'INSTAGRAM', href: '#' },
+        { name: 'PROMOCIONES', href: '#' },
+        { name: 'CONTACTO', href: '#' },
     ]
 
     function classNames(...classes) {
@@ -53,7 +53,7 @@ const Navbar = () => {
                                                 key={item.name}
                                                 href={item.href}
                                                 className={classNames(
-                                                    'text-black navbar_text text-xl rounded-md px-3 lg:px-10 py-2 font-medium'
+                                                    'text-black navbar_text text-xl rounded-md px-3 lg:px-10 py-2 font-bold'
                                                 )}
                                                 aria-current={item.current ? 'page' : undefined}
                                                 activeClass="navbar_textCurrent" smooth spy to={item.href} 

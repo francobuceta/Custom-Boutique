@@ -1,4 +1,5 @@
 import Carousel from "../components/Carousel";
+import Banner from "../components/Banner";
 import slide1 from "../assets/carousel/slide1.png";
 import slide2 from "../assets/carousel/slide2.png";
 import slide3 from "../assets/carousel/slide3.png";
@@ -86,6 +87,10 @@ const Home = () => {
                     <Carousel width="330px" height="576px" array={slides4} />
                 </div>
 
+            </section>
+
+            <section className="container mx-auto px-4">
+                <Banner />
             </section>
 
         </>
