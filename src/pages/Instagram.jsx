@@ -1,52 +1,40 @@
+import { useEffect, useState } from 'react';
 import SectionTitle from '../components/shared/SectionTitle';
 import InstagramCard from '../components/sections/instagram/InstagramCard';
 import useMediaQuery from '../hooks/useMediaQuery';
-
-// Fake data
-const igImages = [
-  {
-    id: 1,
-    src: 'https://instagram.fros2-2.fna.fbcdn.net/v/t51.2885-15/334200434_1430510064443178_2620943001446157267_n.jpg?stp=dst-jpg_e35_p1080x1080&_nc_ht=instagram.fros2-2.fna.fbcdn.net&_nc_cat=106&_nc_ohc=M6FW9IDDIcIAX_zVdFg&edm=AP_V10EBAAAA&ccb=7-5&oh=00_AfDIqnCr6gyrQvMFBT57-tzuMLu_1SiNok8fqp_2HY-1Mg&oe=6418F0DB&_nc_sid=4f375e',
-  },
-  {
-    id: 2,
-    src: 'https://instagram.fros2-2.fna.fbcdn.net/v/t51.2885-15/334200434_1430510064443178_2620943001446157267_n.jpg?stp=dst-jpg_e35_p1080x1080&_nc_ht=instagram.fros2-2.fna.fbcdn.net&_nc_cat=106&_nc_ohc=M6FW9IDDIcIAX_zVdFg&edm=AP_V10EBAAAA&ccb=7-5&oh=00_AfDIqnCr6gyrQvMFBT57-tzuMLu_1SiNok8fqp_2HY-1Mg&oe=6418F0DB&_nc_sid=4f375e',
-  },
-  {
-    id: 3,
-    src: 'https://instagram.fros2-2.fna.fbcdn.net/v/t51.2885-15/334200434_1430510064443178_2620943001446157267_n.jpg?stp=dst-jpg_e35_p1080x1080&_nc_ht=instagram.fros2-2.fna.fbcdn.net&_nc_cat=106&_nc_ohc=M6FW9IDDIcIAX_zVdFg&edm=AP_V10EBAAAA&ccb=7-5&oh=00_AfDIqnCr6gyrQvMFBT57-tzuMLu_1SiNok8fqp_2HY-1Mg&oe=6418F0DB&_nc_sid=4f375e',
-  },
-  {
-    id: 4,
-    src: 'https://instagram.fros2-2.fna.fbcdn.net/v/t51.2885-15/334200434_1430510064443178_2620943001446157267_n.jpg?stp=dst-jpg_e35_p1080x1080&_nc_ht=instagram.fros2-2.fna.fbcdn.net&_nc_cat=106&_nc_ohc=M6FW9IDDIcIAX_zVdFg&edm=AP_V10EBAAAA&ccb=7-5&oh=00_AfDIqnCr6gyrQvMFBT57-tzuMLu_1SiNok8fqp_2HY-1Mg&oe=6418F0DB&_nc_sid=4f375e',
-  },
-  {
-    id: 5,
-    src: 'https://instagram.fros2-2.fna.fbcdn.net/v/t51.2885-15/334200434_1430510064443178_2620943001446157267_n.jpg?stp=dst-jpg_e35_p1080x1080&_nc_ht=instagram.fros2-2.fna.fbcdn.net&_nc_cat=106&_nc_ohc=M6FW9IDDIcIAX_zVdFg&edm=AP_V10EBAAAA&ccb=7-5&oh=00_AfDIqnCr6gyrQvMFBT57-tzuMLu_1SiNok8fqp_2HY-1Mg&oe=6418F0DB&_nc_sid=4f375e',
-  },
-  {
-    id: 6,
-    src: 'https://instagram.fros2-2.fna.fbcdn.net/v/t51.2885-15/334200434_1430510064443178_2620943001446157267_n.jpg?stp=dst-jpg_e35_p1080x1080&_nc_ht=instagram.fros2-2.fna.fbcdn.net&_nc_cat=106&_nc_ohc=M6FW9IDDIcIAX_zVdFg&edm=AP_V10EBAAAA&ccb=7-5&oh=00_AfDIqnCr6gyrQvMFBT57-tzuMLu_1SiNok8fqp_2HY-1Mg&oe=6418F0DB&_nc_sid=4f375e',
-  },
-];
+import fetchInstagramImages from '../utils/instagramFetch';
+import customboutiProfile from '../assets/images/custombouti-profile.jpg';
 
 function Instagram() {
   const isDesktop = useMediaQuery('(min-width: 1440px)');
+  const [instagramImages, setInstagramImages] = useState([]);
+
+  useEffect(() => {
+    const fetchIgImages = async () => {
+      const res = await fetchInstagramImages();
+      const images = res.data.filter((item) => item.media_type === 'IMAGE');
+      setInstagramImages(images);
+    };
+    fetchIgImages();
+  }, []);
+
   return (
     <section id="instagram" className="pt-8 md:pt-[57px] xl:pt-20">
       <SectionTitle title="Instagram" />
       <div className="px-[21px] w-full mt-[23.79px]">
         {/* Show only on desktop */}
-        <div className="hidden xl:flex items-center gap-[13px] max-w-[1107px] m-auto mb-[23px]">
-          {/* Replace this span with an img */}
-          <span src="" alt="" className="w-[50px] h-[50px] rounded-full bg-primary" />
+        <a href="https://www.instagram.com/custombouti/" className="hidden xl:flex items-center gap-[13px] max-w-[1107px] m-auto mb-[23px]">
+          <img src={customboutiProfile} alt="custombouti instagram profile" className="w-[50px] h-[50px] rounded-full bg-primary border border-primary" />
           <p className="text-[13px]">custombouti</p>
-        </div>
+        </a>
         <div className="grid grid-cols-12 gap-[6.8px] md:gap-[13.42px] xl:gap-[15px] max-w-[332px] md:max-w-[656px] xl:max-w-[1107px] m-auto ">
           {
-            igImages.map((image, index) => (
-              !isDesktop && index < 4 ? <InstagramCard key={image.id} src={image.src} />
-                : isDesktop && <InstagramCard key={image.id} src={image.src} />
+            instagramImages.slice(0, isDesktop ? 6 : 4).map((image) => (
+              <InstagramCard
+                key={image.id}
+                src={image.media_url}
+                link={image.permalink}
+              />
             ))
           }
         </div>
