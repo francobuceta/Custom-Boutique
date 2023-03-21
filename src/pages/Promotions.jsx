@@ -21,7 +21,7 @@ const Promotions = () => {
   };
 
   return (
-    <section className="mt-[36px] md:mt-[60px] xl:mt-[80px] m-auto max-w-[1440px] px-[27px] md:px-[81px] pb-[40px] md:pb-[65px] xl:pb-20 flex flex-col items-center">
+    <section id="promotions" className="mt-[36px] md:mt-[60px] xl:mt-[80px] m-auto max-w-[1440px] px-[27px] md:px-[81px] pb-[40px] md:pb-[65px] xl:pb-20 flex flex-col items-center">
       <SectionTitle title="Promociones" />
       <h4 className="mt-[26px] md:mt-[36px] xl:mt-[56px] font-bold md:text-[25px] xl:text-[33px] md:leading-[30px] xl:leading-[40px] leading-[19px] text-center">¡Recibí beneficios con tus compras! *</h4>
       <div className="flex flex-col items-center md:items-start xl:flex-row flex-wrap xl:mt-[65px] xl:justify-between">

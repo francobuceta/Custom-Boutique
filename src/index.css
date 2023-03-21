@@ -8,7 +8,14 @@
 
 /* Subrayado del menu de navbar */
 .navbar_text {
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #1E1E1E;
+  font-size: 1.25rem;
+  padding: 0.5rem 0.75rem;
+  font-weight: bold;
+  width: 13rem;
 }
 
 .navbar_textCurrent {
@@ -29,6 +36,54 @@
   /* -webkit-transition: all 1s;
   transition: all 1s; */
   
+}
+
+.navbar_separator {
+  border-bottom: 1px solid #0f0f0f;
+  height: 20px;
+}
+
+@media(max-width: 1190px) {
+  .navbar_text {
+    padding: 0 2.5rem;
+    width: 12rem;
+    font-size: 1.15rem;
+  }
+}
+
+@media(max-width: 1100px) {
+  .navbar_text {
+    padding: 0 2.5rem;
+    width: 9rem;
+    font-size: 1.15rem;
+  }
+}
+
+@media(max-width: 790px) {
+  .navbar_text {
+    font-size: 1rem;
+    width: 8rem;
+  }
+  .navbar_textCurrent {
+    font-size: 1.2rem!important;
+  }
+}
+
+@media(max-width: 768px) {
+  .navbar_text {
+    font-size: 1rem;
+    margin-bottom: 20px!important;
+    padding-right: 20px;
+    justify-content: start;
+  }
+  .navbar_textCurrent {
+    font-size: 1rem!important;
+    color: #609DC2;
+  }
+
+  .navbar_textCurrent::after {
+    display: none;
+  }
 }
 
 
@@ -54,3 +109,4 @@
   border-left: 1px solid #F5F5F5;
   height: 118px;
 }
+

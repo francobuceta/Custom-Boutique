@@ -20,23 +20,25 @@ const Carousel = ({ width, height, array } ) => {
     return (
         <>
             <div style={{ maxWidth: width, height: height }}
-                className=" w-full m-auto relative">
+                className="w-full m-auto relative">
                 
                 <div style={{ backgroundImage: `url(${array[currentIndex].url})` }}
-                    className="w-full h-full rounded-xl bg-center bg-cover duration-500"> 
+                    className="w-full h-full rounded-xl bg-center bg-cover"> 
                 </div>
 
                 {/* Left Arrow */}
 
                 <div className="absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 
-                    text-2xl p-2 text-stone-500 rounded-full bg-black/20 cursor-pointer" onClick={prevSlide}>
+                    text-2xl p-2 text-stone-500 rounded-full bg-black/20 cursor-pointer" 
+                    onClick={prevSlide}>
                     <HiOutlineArrowLeft size={30} color={"#ffffff"} />
                 </div>
 
                 {/* Right Arrow */}
 
                 <div className="absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 
-                    text-2xl p-2 text-stone-500 rounded-full bg-black/20 cursor-pointer" onClick={nextSlide}>
+                    text-2xl p-2 text-stone-500 rounded-full bg-black/20 cursor-pointer" 
+                    onClick={nextSlide}>
                     <HiOutlineArrowRight size={30} color={"#ffffff"} />
                 </div>
 
