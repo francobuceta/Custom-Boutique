@@ -6,7 +6,7 @@
   box-sizing: border-box;
 }
 
-/* Subrayado del menu de navbar */
+/* Navbar */
 .navbar_text {
   display: flex;
   justify-content: center;
@@ -33,9 +33,54 @@
   width: 40px;
   height: 5px;
   background-color: #609DC2;
-  /* -webkit-transition: all 1s;
-  transition: all 1s; */
-  
+}
+
+.navbar_separator {
+  border-bottom: 1px solid #0f0f0f;
+  height: 20px;
+}
+
+@media(max-width: 1190px) {
+  .navbar_text {
+    padding: 0 2.5rem;
+    width: 12rem;
+    font-size: 1.15rem;
+  }
+}
+
+@media(max-width: 1100px) {
+  .navbar_text {
+    padding: 0 2.5rem;
+    width: 9rem;
+    font-size: 1.15rem;
+  }
+}
+
+@media(max-width: 790px) {
+  .navbar_text {
+    font-size: 1rem;
+    width: 8rem;
+  }
+  .navbar_textCurrent {
+    font-size: 1.2rem!important;
+  }
+}
+
+@media(max-width: 768px) {
+  .navbar_text {
+    font-size: 1rem;
+    margin-bottom: 20px!important;
+    padding-right: 20px;
+    justify-content: start;
+  }
+  .navbar_textCurrent {
+    font-size: 1rem!important;
+    color: #609DC2;
+  }
+
+  .navbar_textCurrent::after {
+    display: none;
+  }
 }
 
 .navbar_separator {
@@ -87,7 +132,7 @@
 }
 
 
-/* Translate efecto y barra separadora en banner */
+/* Banner */
 
 .banner_iconContainer {
   display: flex;
