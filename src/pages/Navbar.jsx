@@ -39,16 +39,23 @@ const Navbar = () => {
                             </div>
                             <div className="flex flex-1 items-center justify-center md:justify-around">
                                 <div className="flex flex-shrink-0 items-center">
-                                    <img
-                                        className="block h-28 w-auto lg:hidden"
-                                        src={logo}
-                                        alt="Logo Custom Boutique"
-                                    />
-                                    <img
-                                        className="hidden w-auto lg:block"
-                                        src={logo}
-                                        alt="Logo Custom Boutique"
-                                    />
+                                    {
+                                        !open
+                                        ? <>
+                                            <img
+                                                className="block h-28 w-auto lg:hidden"
+                                                src={logo}
+                                                alt="Logo Custom Boutique"
+                                            />
+                                            <img
+                                                className="hidden w-auto lg:block"
+                                                src={logo}
+                                                alt="Logo Custom Boutique"
+                                            />
+                                        </>
+                                        : <div className='h-20'></div>
+                                    }
+
                                 </div>
                                 <div className="hidden md:ml-6 md:block">
                                     <div className="flex lg:gap-4">
@@ -58,8 +65,8 @@ const Navbar = () => {
                                                 href={item.href}
                                                 className={classNames('navbar_text')}
                                                 aria-current={item.current ? 'page' : undefined}
-                                                activeClass="navbar_textCurrent" smooth spy to={item.href} 
-                                                offset= {-200}
+                                                activeClass="navbar_textCurrent" smooth spy to={item.href}
+                                                offset={-200}
                                             >
                                                 {item.name}
                                             </Link>
@@ -74,13 +81,13 @@ const Navbar = () => {
                         <div className="space-y-1 px-2 pt-2 pb-3">
                             {navigation.map((item) => (
                                 <Link
-                                    
+
                                     key={item.name}
                                     href={item.href}
                                     className={classNames('navbar_text')}
                                     aria-current={item.current ? 'page' : undefined}
-                                    activeClass="navbar_textCurrent" smooth spy to={item.href} 
-                                    offset= {-250}
+                                    activeClass="navbar_textCurrent" smooth spy to={item.href}
+                                    offset={-250}
                                 >
                                     {item.name}
                                 </Link>
@@ -89,13 +96,19 @@ const Navbar = () => {
 
                         <div className='navbar_separator'></div>
 
-                        <div className='flex justify-center gap-4 mt-8'>
-                            <img src={instagram} alt="instagram icon" />
-                            <img src={facebook} alt="facebook icon" />
-                            <img src={tiktok} alt="tiktok icon" />
+                        <div className='flex justify-center gap-4 mt-8 mb-8'>
+                            <a href="https://www.instagram.com/custombouti/" target="_blank">
+                                <img src={instagram} alt="instagram icon" />
+                            </a>
+                            <a href="https://www.facebook.com/profile.php?id=100083202024622" target="_blank">
+                                <img src={facebook} alt="facebook icon" />
+                            </a>
+                            <a href="https://www.tiktok.com/@custombahiablanca" target="_blank">
+                                <img src={tiktok} alt="tiktok icon" />
+                            </a>
                         </div>
 
-                        <div className='flex flex-col justify-center'>
+                        <div className='flex flex-col justify-center items-center gap-2'>
                             <img src={mobile_logo} className="w-48 h-20" alt="Logo Custom Boutique" />
                             <p>Yrigoyen 235 - Bahía Blanca</p>
                         </div>

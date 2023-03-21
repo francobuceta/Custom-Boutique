@@ -117,7 +117,7 @@ const Home = () => {
 
                         : <>
 
-                            <section className="grid gap-2 px-4" style={{ gridTemplateColumns: "2fr 1fr 1fr 0fr" }} >
+                            <section className="grid gap-2 px-4 xl:px-28 xxl:px-52" style={{ gridTemplateColumns: "2fr 1fr 1fr 0fr" }} >
 
                                 <div>
                                     <Carousel width="680px" height="576px" array={slides1} />
