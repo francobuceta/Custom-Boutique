@@ -26,7 +26,7 @@ const Contact = () => {
       <SectionTitle title="Contacto" />
       <div className="px-[27px] xl:px-0 m-auto mt-[26px] md:mt-[36px] xl:mt-[56px] flex flex-col xl:flex-row xl:items-center justify-center gap-[30px] md:gap-[37px] xl:gap-[72px]">
         <div className="relative">
-          <img src={isTablet ? storeDesktopImage : storeImage} alt="Custom boutique store" className="z-[50] relative w-auto h-auto" />
+          <img src={isTablet ? storeDesktopImage : storeImage} alt="Custom boutique store" className="z-[40] relative w-auto h-auto" />
         </div>
         <div>
           <div className="flex flex-col md:flex-wrap xl:flex-nowrap md:max-h-[170px] xl:max-h-none gap-7 md:gap-[42px] xl:gap-[43px] relative">
