@@ -5,7 +5,7 @@ import useMediaQuery from '../hooks/useMediaQuery';
 import fetchInstagramImages from '../utils/instagramFetch';
 import customboutiProfile from '../assets/images/custombouti-profile.jpg';
 
-function Instagram() {
+const Instagram = () => {
   const isDesktop = useMediaQuery('(min-width: 1440px)');
   const [instagramImages, setInstagramImages] = useState([]);
 
@@ -41,6 +41,6 @@ function Instagram() {
       </div>
     </section>
   );
-}
+};
 
 export default Instagram;
