@@ -6,7 +6,7 @@
   box-sizing: border-box;
 }
 
-/* Subrayado del menu de navbar */
+/* Navbar */
 .navbar_text {
   display: flex;
   justify-content: center;
@@ -33,9 +33,6 @@
   width: 40px;
   height: 5px;
   background-color: #609DC2;
-  /* -webkit-transition: all 1s;
-  transition: all 1s; */
-  
 }
 
 .navbar_separator {
@@ -87,7 +84,7 @@
 }
 
 
-/* Translate efecto y barra separadora en banner */
+/* Banner */
 
 .banner_iconContainer {
   display: flex;

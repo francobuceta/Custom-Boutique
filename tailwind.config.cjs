@@ -7,6 +7,7 @@ module.exports = {
         primary: '#65B2C6',
         secondary: '#1E1E1E',
         alternative: '#F5F5F5',
+        navbar: "#F2F2F2"
       },
       screens: {
         sm: '375px',
