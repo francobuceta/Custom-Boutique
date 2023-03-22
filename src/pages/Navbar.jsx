@@ -22,7 +22,7 @@ const Navbar = () => {
 
     return (
         <Disclosure as="nav" className="bg-navbar sticky top-0 z-50">
-            {({ open }) => (
+            {({ open, close }) => (
                 <>
                     <div className="mx-auto max-w-7xl px-2 md:px-6 lg:px-8">
                         <div className="relative flex lg:h-48 md:h-28 items-center justify-between">
@@ -53,7 +53,7 @@ const Navbar = () => {
                                                 alt="Logo Custom Boutique"
                                             />
                                         </>
-                                        : <div className='h-20'></div>
+                                        : <div className='h-28'></div>
                                     }
 
                                 </div>
@@ -87,7 +87,10 @@ const Navbar = () => {
                                     className={classNames('navbar_text')}
                                     aria-current={item.current ? 'page' : undefined}
                                     activeClass="navbar_textCurrent" smooth spy to={item.href}
-                                    offset={-250}
+                                    offset={-570}
+                                    onClick={() => {
+                                        close();
+                                    }}
                                 >
                                     {item.name}
                                 </Link>
@@ -110,7 +113,7 @@ const Navbar = () => {
 
                         <div className='flex flex-col justify-center items-center gap-2'>
                             <img src={mobile_logo} className="w-48 h-20" alt="Logo Custom Boutique" />
-                            <p>Yrigoyen 235 - Bahía Blanca</p>
+                            <p className='pb-5'>Yrigoyen 235 - Bahía Blanca</p>
                         </div>
 
                     </Disclosure.Panel>
