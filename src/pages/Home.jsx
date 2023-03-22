@@ -1,5 +1,5 @@
-import Carousel from "../components/Carousel";
-import Banner from "../components/Banner";
+import Carousel from "../components/sections/home/Carousel";
+import Banner from "../components/sections/home/Banner";
 import slide1 from "../assets/carousel/slide1.png";
 import slide2 from "../assets/carousel/slide2.png";
 import slide3 from "../assets/carousel/slide3.png";
