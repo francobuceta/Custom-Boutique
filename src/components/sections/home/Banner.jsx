@@ -1,5 +1,6 @@
 import instagram from "../../../assets/banner-icons/instagram.png";
 import wp from "../../../assets/banner-icons/wp.png";
+import tienda from "../../../assets/banner-icons/tienda_nube.png";
 import mobileInsta from "../../../assets/banner-icons/mobile_instagram.png";
 import mobileWp from "../../../assets/banner-icons/mobile_wp.png";
 import useMediaQuery from '../../../hooks/useMediaQuery';
@@ -36,7 +37,8 @@ const Banner = () => {
 
                     <div>
                         <a href='https://custom15.mitiendanube.com/productos/' className="banner_iconContainer" target="_blank">
-                            <img src={isMobile ? mobileWp : wp} alt="icono tienda nube" className="banner_icon" />
+                            <img src={tienda} alt="icono tienda nube" 
+                            className={isMobile ? "banner_icon h-[35px] w-[35px]" : "banner_icon h-[55px] w-[55px]"} />
                             <p className="text-alternative text-center md:text-xl sm:text-lg">
                                 {isTablet ? "Tienda Nube" : <>Visitá nuestra<br />Tienda Nube</>}
                             </p>
