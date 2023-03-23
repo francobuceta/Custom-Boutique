@@ -44,7 +44,7 @@
 .navbar_textCurrent {
   position: relative;
   font-size: 1.5rem!important;
-  transition: 0.15s;
+  transition: 0.10s;
 }
 
 .navbar_textCurrent::after{

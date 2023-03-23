@@ -17,7 +17,7 @@ const Navbar = () => {
         { name: 'CONTACTO', href: 'contact' },
     ]
 
-    const isBigScreen = useMediaQuery('(min-width: 1800px)')
+    const isBigScreen = useMediaQuery('(min-width: 1800px)');
 
     function classNames(...classes) {
         return classes.filter(Boolean).join(' ')
