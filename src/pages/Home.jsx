@@ -94,7 +94,7 @@ const Home = () => {
                 isMobile
                     ? <>
                         <div>
-                            <Carousel width="330px" height="296px" array={slidesMobile} />
+                            <Carousel width="350px" height="296px" array={slidesMobile} />
                         </div>
                     </>
 
@@ -117,7 +117,7 @@ const Home = () => {
 
                         : <>
 
-                            <section className="grid gap-2 px-4 xl:px-28 xxl:px-52" style={{ gridTemplateColumns: "2fr 1fr 1fr 0fr" }} >
+                            <section className="grid gap-2 px-4 xl:px-36 xxl:px-64 tv:px-80" style={{ gridTemplateColumns: "2fr 1fr 1fr 0fr" }} >
 
                                 <div>
                                     <Carousel width="680px" height="576px" array={slides1} />
@@ -137,7 +137,9 @@ const Home = () => {
                         </>
             }
 
-            <section className="container mx-auto px-4 w-full max-w-[1600px] flex justify-center mt-5">
+            <section 
+                className={isMobile ? "container mx-auto px-4 w-full max-w-[390px] flex justify-center mt-5"
+                                    : "container mx-auto px-4 w-full max-w-[1900px] flex justify-center mt-5 xl:px-36 xxl:px-64 tv:px-80"}>
                 <Banner />
             </section>
 

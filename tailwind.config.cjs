@@ -15,6 +15,7 @@ module.exports = {
         lg: '1024px',
         xl: '1440px',
         xxl: '1680px',
+        tv: '1920px'
       },
       fontFamily: {
         lato: ['Lato', 'sans-serif'],
