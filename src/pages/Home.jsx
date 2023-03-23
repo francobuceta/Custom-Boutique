@@ -2,9 +2,12 @@ import Carousel from "../components/sections/home/Carousel";
 import Banner from "../components/sections/home/Banner";
 import slide1 from "../assets/carousel/slide1.png";
 import slide2 from "../assets/carousel/slide2.png";
-import slide3 from "../assets/carousel/slide3.png";
-import slide4 from "../assets/carousel/slide4.png";
-import logo from "../assets/logo.png";
+import slide3 from "../assets/carousel/slide3.jpg";
+import slide4 from "../assets/carousel/slide4.jpg";
+import slide5 from "../assets/carousel/slide5.jpg";
+import slide6 from "../assets/carousel/slide6.jpg";
+import slide7 from "../assets/carousel/slide7.jpg";
+import slide8 from "../assets/carousel/slide8.jpg";
 import useMediaQuery from '../hooks/useMediaQuery';
 
 const Home = () => {
@@ -24,6 +27,18 @@ const Home = () => {
         },
         {
             url: slide4
+        },
+        {
+            url: slide5
+        },
+        {
+            url: slide6
+        },
+        {
+            url: slide7
+        },
+        {
+            url: slide8
         }
     ];
 
@@ -32,13 +47,7 @@ const Home = () => {
             url: slide1
         },
         {
-            url: logo
-        },
-        {
-            url: slide1
-        },
-        {
-            url: logo
+            url: slide5
         }
     ];
 
@@ -47,13 +56,7 @@ const Home = () => {
             url: slide2
         },
         {
-            url: logo
-        },
-        {
-            url: slide2
-        },
-        {
-            url: logo
+            url: slide6
         }
     ];
 
@@ -62,13 +65,7 @@ const Home = () => {
             url: slide3
         },
         {
-            url: logo
-        },
-        {
-            url: slide3
-        },
-        {
-            url: logo
+            url: slide7
         }
     ];
 
@@ -77,13 +74,7 @@ const Home = () => {
             url: slide4
         },
         {
-            url: logo
-        },
-        {
-            url: slide4
-        },
-        {
-            url: logo
+            url: slide8
         }
     ];
 
@@ -94,7 +85,7 @@ const Home = () => {
                 isMobile
                     ? <>
                         <div>
-                            <Carousel width="350px" height="296px" array={slidesMobile} />
+                            <Carousel width="350px" height="350px" array={slidesMobile} />
                         </div>
                     </>
 

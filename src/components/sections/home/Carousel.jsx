@@ -23,7 +23,7 @@ const Carousel = ({ width, height, array } ) => {
                 className="w-full m-auto relative">
                 
                 <div style={{ backgroundImage: `url(${array[currentIndex].url})` }}
-                    className="w-full h-full rounded-xl bg-center bg-cover"> 
+                    className="w-full h-full rounded-xl bg-top bg-cover"> 
                 </div>
 
                 {/* Left Arrow */}
