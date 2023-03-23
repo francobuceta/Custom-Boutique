@@ -22,10 +22,9 @@ const Instagram = () => {
     <section id="instagram" className="pt-8 md:pt-[57px] xl:pt-20">
       <SectionTitle title="Instagram" />
       <div className="px-[21px] w-full mt-[23.79px]">
-        {/* Show only on desktop */}
-        <a href="https://www.instagram.com/custombouti/" className="hidden xl:flex items-center gap-[13px] max-w-[1107px] m-auto mb-[23px]">
-          <img src={customboutiProfile} alt="custombouti instagram profile" className="w-[50px] h-[50px] rounded-full bg-primary border border-primary" />
-          <p className="text-[13px]">custombouti</p>
+        <a href="https://www.instagram.com/custombouti/" className="flex items-center gap-[6px] md:gap-[10px] xl:gap-[11px] max-w-[332.1px] md:max-w-[656px] xl:max-w-[1107px] m-auto mb-[9px] md:mb-4 xl:mb-5">
+          <img src={customboutiProfile} alt="custombouti instagram profile" className="w-[25px] h-[25px] md:w-10 md:h-10 xl:w-[50px] xl:h-[50px] rounded-full bg-primary border border-primary" />
+          <p className="text-[10px] leading-3 md:text-[13px] md:leading-4 xl:text-[15px] xl:leading-[18px]">custombouti</p>
         </a>
         <div className="grid grid-cols-12 gap-[6.8px] md:gap-[13.42px] xl:gap-[15px] max-w-[332px] md:max-w-[656px] xl:max-w-[1107px] m-auto ">
           {
