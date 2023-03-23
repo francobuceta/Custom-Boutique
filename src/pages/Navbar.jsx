@@ -1,6 +1,7 @@
 import { Disclosure } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import { Link } from "react-scroll";
+import useMediaQuery from '../hooks/useMediaQuery';
 import logo from "../assets/logo.png";
 import facebook from "../assets/images/mobile_face.png";
 import instagram from "../assets/images/mobile_insta.png";
@@ -15,6 +16,8 @@ const Navbar = () => {
         { name: 'PROMOCIONES', href: 'promotions' },
         { name: 'CONTACTO', href: 'contact' },
     ]
+
+    const isBigScreen = useMediaQuery('(min-width: 1800px)')
 
     function classNames(...classes) {
         return classes.filter(Boolean).join(' ')
@@ -66,7 +69,7 @@ const Navbar = () => {
                                                 className={classNames('navbar_text')}
                                                 aria-current={item.current ? 'page' : undefined}
                                                 activeClass="navbar_textCurrent" smooth spy to={item.href}
-                                                offset={-200}
+                                                offset={isBigScreen ? -350 : -200}
                                             >
                                                 {item.name}
                                             </Link>
