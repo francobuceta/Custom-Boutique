@@ -1,126 +1,55 @@
-import { Disclosure } from '@headlessui/react';
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
-import { Link } from "react-scroll";
-import logo from "../assets/logo.png";
-import facebook from "../assets/images/mobile_face.png";
-import instagram from "../assets/images/mobile_insta.png";
-import tiktok from "../assets/images/mobile_tiktok.png";
-import mobile_logo from "../assets/images/mobile_logo.png";
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+import { Link } from 'react-scroll';
+import mobileLogo from '../assets/images/mobile_logo.png';
+import desktopLogo from '../assets/images/desktopLogo.png';
+import MobileMenu from '../components/sections/navbar/MobileMenu';
+import useMediaQuery from '../hooks/useMediaQuery';
+
+const navLinks = [
+  { name: 'INICIO', href: 'home' },
+  { name: 'INSTAGRAM', href: 'instagram' },
+  { name: 'PROMOCIONES', href: 'promotions' },
+  { name: 'CONTACTO', href: 'contact' },
+];
+
+const activeLinkClass = 'xl:text-[24px] leading-6 xl:leading-[29px] after:absolute after:-bottom-2 xl:after:-bottom-3 text-[20px] relative after:content-[""] after:bg-primary after:w-[25px] xl:after:w-[50px] after:left-[calc(50%-12.5px)] xl:after:left-[calc(50%-25px)] after:h-[3.5px] xl:after:h-[7px] after:transition-[width] after:duration-300 after:ease-in after';
 
 const Navbar = () => {
+  const isDesktop = useMediaQuery('(min-width: 1440px)');
 
-    const navigation = [
-        { name: 'INICIO', href: 'home' },
-        { name: 'INSTAGRAM', href: 'instagram' },
-        { name: 'PROMOCIONES', href: 'promotions' },
-        { name: 'CONTACTO', href: 'contact' },
-    ]
+  return (
+    <nav className="flex justify-center md:justify-between items-center pt-[42px] pb-6 xl:pt-0 xl:pb-0 md:pt-5 pl-[32px] md:pl-0 m-auto mb-[7px] fixed top-0 w-screen bg-navbar z-[400] drop-shadow-sm">
+      <div className="flex items-center justify-between md:w-full md:pr-[58px] m-auto max-w-[1440px]">
+        <img src={isDesktop ? desktopLogo : mobileLogo} alt="Custom Bouti Logo" />
+        <MobileMenu navLinks={navLinks} />
+        <div className="hidden md:flex">
+          <ul className="flex items-center gap-[35px] xl:gap-[120px] text-[14px] xl:text-[20px] leading-[17px] xl:leading-6 font-bold">
+            {navLinks.map((link) => (
 
-    function classNames(...classes) {
-        return classes.filter(Boolean).join(' ')
-    }
-
-    return (
-        <Disclosure as="nav" className="bg-navbar sticky top-0 z-50">
-            {({ open, close }) => (
-                <>
-                    <div className="mx-auto max-w-7xl px-2 md:px-6 lg:px-8">
-                        <div className="relative flex lg:h-48 md:h-28 items-center justify-between">
-                            <div className="absolute inset-y-0 left-0 flex items-center md:hidden">
-                                {/* Mobile menu button*/}
-                                <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
-                                    <span className="sr-only">Open main menu</span>
-                                    {open ? (
-                                        <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
-                                    ) : (
-                                        <Bars3Icon className="block h-6 w-6" aria-hidden="true" />
-                                    )}
-                                </Disclosure.Button>
-                            </div>
-                            <div className="flex flex-1 items-center justify-center md:justify-around">
-                                <div className="flex flex-shrink-0 items-center">
-                                    {
-                                        !open
-                                        ? <>
-                                            <img
-                                                className="block h-28 w-auto lg:hidden"
-                                                src={logo}
-                                                alt="Logo Custom Boutique"
-                                            />
-                                            <img
-                                                className="hidden w-auto lg:block"
-                                                src={logo}
-                                                alt="Logo Custom Boutique"
-                                            />
-                                        </>
-                                        : <div className='h-28'></div>
-                                    }
-
-                                </div>
-                                <div className="hidden md:ml-6 md:block">
-                                    <div className="flex lg:gap-4">
-                                        {navigation.map((item) => (
-                                            <Link
-                                                key={item.name}
-                                                href={item.href}
-                                                className={classNames('navbar_text')}
-                                                aria-current={item.current ? 'page' : undefined}
-                                                activeClass="navbar_textCurrent" smooth spy to={item.href}
-                                                offset={-200}
-                                            >
-                                                {item.name}
-                                            </Link>
-                                        ))}
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <Disclosure.Panel className="md:hidden">
-                        <div className="space-y-1 px-2 pt-2 pb-3">
-                            {navigation.map((item) => (
-                                <Link
-
-                                    key={item.name}
-                                    href={item.href}
-                                    className={classNames('navbar_text')}
-                                    aria-current={item.current ? 'page' : undefined}
-                                    activeClass="navbar_textCurrent" smooth spy to={item.href}
-                                    offset={-570}
-                                    onClick={() => {
-                                        close();
-                                    }}
-                                >
-                                    {item.name}
-                                </Link>
-                            ))}
-                        </div>
-
-                        <div className='navbar_separator'></div>
-
-                        <div className='flex justify-center gap-4 mt-8 mb-8'>
-                            <a href="https://www.instagram.com/custombouti/" target="_blank">
-                                <img src={instagram} alt="instagram icon" />
-                            </a>
-                            <a href="https://www.facebook.com/profile.php?id=100083202024622" target="_blank">
-                                <img src={facebook} alt="facebook icon" />
-                            </a>
-                            <a href="https://www.tiktok.com/@custombahiablanca" target="_blank">
-                                <img src={tiktok} alt="tiktok icon" />
-                            </a>
-                        </div>
-
-                        <div className='flex flex-col justify-center items-center gap-2'>
-                            <img src={mobile_logo} className="w-48 h-20" alt="Logo Custom Boutique" />
-                            <p className='pb-5'>Yrigoyen 235 - Bahía Blanca</p>
-                        </div>
-
-                    </Disclosure.Panel>
-                </>
-            )}
-        </Disclosure>
-    )
-}
+              <li
+                key={link.name}
+              >
+                <Link
+                  href={link.href}
+                  className="text-black after:w-[0px] duration-300 transition-all ease-in-out"
+                  activeClass={activeLinkClass}
+                  aria-current={link.current ? 'page' : undefined}
+                  spy
+                  duration={650}
+                  delay={0}
+                  to={link.href}
+                  offset={isDesktop ? -200 : -130}
+                >
+                  {link.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </nav>
+  );
+};
 
 export default Navbar;
