@@ -22,7 +22,7 @@ const Contact = () => {
   };
 
   return (
-    <section className="overflow-hidden relative flex flex-col justify-center pb-[81px] md:pb-[79px] xl:pb-[99px]" id="contact">
+    <section id="contact" className="overflow-hidden relative flex flex-col justify-center pb-[81px] md:pb-[79px] xl:pb-[99px]">
       <SectionTitle title="Contacto" />
       <div className="px-[27px] xl:px-0 m-auto mt-[26px] md:mt-[36px] xl:mt-[56px] flex flex-col xl:flex-row xl:items-center justify-center gap-[30px] md:gap-[37px] xl:gap-[72px]">
         <div className="relative">
