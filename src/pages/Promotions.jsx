@@ -41,8 +41,10 @@ const Promotions = () => {
         {/* Store illustration */}
         <div className="w-full xl:ml-[60px] xl:relative">
           <article className="xl:absolute xl:-bottom-[2px] flex items-center justify-center md:justify-start mt-[34px] md:mt-[42px] xl:mt-0 md:ml-[55px] xl:ml-0">
-            <p className="max-w-[161px] md:max-w-[250px] xl:max-w-[300px] text-[15px] md:text-[20px] xl:text-[25px] leading-[25px] md:leading-[30px] xl:leading-[34px] md:order-1">
+            <p className="max-w-[180px] md:max-w-[250px] xl:max-w-[300px] text-[15px] md:text-[20px] xl:text-[25px] leading-[25px] md:leading-[30px] xl:leading-[34px] md:order-1">
               * Aplica solo para compras en nuestra tienda física.
+              <br />
+              * Productos seleccionados entre tops y remeras.
             </p>
             <img src={isTablet ? storeItemTabletImage : storeItemImage} alt="Illustration" className="md:order-0 md:mr-2" />
           </article>

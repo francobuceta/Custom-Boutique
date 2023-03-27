@@ -20,13 +20,13 @@ const Navbar = () => {
 
   return (
     <nav className="flex justify-center md:justify-between items-center pt-[42px] pb-6 xl:pt-0 xl:pb-0 md:pt-5 pl-[32px] md:pl-0 m-auto mb-[7px] fixed top-0 w-screen bg-navbar z-[400] drop-shadow-sm">
-      <div className="flex items-center justify-between md:w-full md:pr-[58px] m-auto max-w-[1440px]">
+      <div className="flex items-center justify-between xl:justify-start md:w-full md:pr-[58px] m-auto max-w-[1440px]">
         <img
           src={isDesktop ? desktopLogo : mobileLogo}
           alt="Custom Bouti Logo"
         />
         <MobileMenu navLinks={navLinks} />
-        <div className="hidden md:flex">
+        <div className="hidden md:flex xl:ml-[116px]">
           <ul className="flex items-center gap-[35px] xl:gap-[120px] text-[14px] xl:text-[20px] leading-[17px] xl:leading-6 font-bold">
             {navLinks.map((link) => (
               <li key={link.name}>
