@@ -13,10 +13,10 @@ const navLinks = [
   { name: 'CONTACTO', href: 'contact' },
 ];
 
-const activeLinkClass = 'xl:text-[24px] leading-6 xl:leading-[29px] after:absolute after:-bottom-2 xl:after:-bottom-3 text-[20px] relative after:content-[""] after:bg-primary after:w-[25px] xl:after:w-[50px] after:left-[calc(50%-12.5px)] xl:after:left-[calc(50%-25px)] after:h-[3.5px] xl:after:h-[7px] after:transition-[width] after:duration-300 after:ease-in after';
+const activeLinkClass = 'lg:text-[24px] leading-6 xl:leading-[29px] after:absolute after:-bottom-2 xl:after:-bottom-3 text-[20px] relative after:content-[""] after:bg-primary after:w-[25px] xl:after:w-[50px] after:left-[calc(50%-12.5px)] xl:after:left-[calc(50%-25px)] after:h-[3.5px] xl:after:h-[7px] after:transition-[width] after:duration-300 after:ease-in after';
 
 const Navbar = () => {
-  const isDesktop = useMediaQuery('(min-width: 1440px)');
+  const isDesktop = useMediaQuery('(min-width: 1024px)');
 
   return (
     <nav className="flex justify-center md:justify-between items-center pt-[42px] pb-6 xl:pt-0 xl:pb-0 md:pt-5 pl-[32px] md:pl-0 m-auto mb-[7px] fixed top-0 w-screen bg-navbar z-[400] drop-shadow-sm">
@@ -27,7 +27,7 @@ const Navbar = () => {
         />
         <MobileMenu navLinks={navLinks} />
         <div className="hidden md:flex xl:ml-[116px]">
-          <ul className="flex items-center gap-[35px] xl:gap-[120px] text-[14px] xl:text-[20px] leading-[17px] xl:leading-6 font-bold">
+          <ul className="flex items-center gap-[35px] xl:gap-[120px] text-[14px] lg:text-[20px] leading-[17px] xl:leading-6 font-bold">
             {navLinks.map((link) => (
               <li key={link.name}>
                 <Link
