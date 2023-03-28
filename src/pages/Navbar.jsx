@@ -19,7 +19,7 @@ const Navbar = () => {
   const isDesktop = useMediaQuery('(min-width: 1024px)');
 
   return (
-    <nav className="flex justify-center md:justify-between items-center pt-[42px] pb-6 xl:pt-0 xl:pb-0 md:pt-5 pl-[32px] md:pl-0 m-auto mb-[7px] fixed top-0 w-screen bg-navbar z-[400] drop-shadow-sm">
+    <nav className="flex justify-center md:justify-between items-center pt-[42px] pb-6 lg:pt-0 lg:pb-0 md:pt-5 pl-[32px] md:pl-0 m-auto mb-[7px] fixed top-0 w-screen bg-navbar z-[400] drop-shadow-sm">
       <div className="flex items-center justify-around xl:justify-start md:w-full md:pr-[58px] m-auto max-w-[1440px]">
         <img
           src={isDesktop ? desktopLogo : mobileLogo}
