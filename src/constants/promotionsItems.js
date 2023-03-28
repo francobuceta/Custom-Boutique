@@ -29,7 +29,7 @@ const promotionsItems = [
   {
     id: 3,
     description: 'Con la compra de 6 prendas',
-    boldText: '¡te hacemos un regalo!',
+    boldText: '¡te regalamos otra!',
     image: {
       mobile: bagItemImage,
       tablet: bagItemDesktopImage,
