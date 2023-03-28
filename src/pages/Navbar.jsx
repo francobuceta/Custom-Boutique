@@ -13,7 +13,7 @@ const navLinks = [
   { name: 'CONTACTO', href: 'contact' },
 ];
 
-const activeLinkClass = 'lg:text-[24px] leading-6 xl:leading-[29px] after:absolute after:-bottom-2 xl:after:-bottom-3 text-[20px] relative after:content-[""] after:bg-primary after:w-[25px] xl:after:w-[50px] after:left-[calc(50%-12.5px)] xl:after:left-[calc(50%-25px)] after:h-[3.5px] xl:after:h-[7px] after:transition-[width] after:duration-300 after:ease-in after';
+const activeLinkClass = 'lg:text-[24px] leading-6 xl:leading-[29px] after:absolute after:-bottom-2 lg:after:-bottom-3 text-[20px] relative after:content-[""] after:bg-primary after:w-[25px] lg:after:w-[50px] after:left-[calc(50%-12.5px)] lg:after:left-[calc(50%-25px)] after:h-[3.5px] lg:after:h-[7px] after:transition-[width] after:duration-300 after:ease-in after';
 
 const Navbar = () => {
   const isDesktop = useMediaQuery('(min-width: 1024px)');
