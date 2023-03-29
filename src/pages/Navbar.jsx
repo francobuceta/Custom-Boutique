@@ -17,6 +17,7 @@ const activeLinkClass = 'lg:text-[24px] leading-6 xl:leading-[29px] after:absolu
 
 const Navbar = () => {
   const isDesktop = useMediaQuery('(min-width: 1024px)');
+  const isBigScreen = useMediaQuery('(min-width: 1600px)');
 
   return (
     <nav className="flex justify-center md:justify-between items-center pt-6 pb-6 lg:pt-0 lg:pb-0 pl-[32px] md:pl-0 m-auto mb-[7px] fixed top-0 w-screen bg-navbar z-[400] drop-shadow-sm">
@@ -39,7 +40,7 @@ const Navbar = () => {
                   duration={650}
                   delay={0}
                   to={link.href}
-                  offset={isDesktop ? -200 : -130}
+                  offset={isBigScreen ? -300 : isDesktop ? -200 : -130}
                 >
                   {link.name}
                 </Link>
