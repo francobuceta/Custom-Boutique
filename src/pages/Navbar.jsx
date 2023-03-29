@@ -27,7 +27,7 @@ const Navbar = () => {
         />
         <MobileMenu navLinks={navLinks} />
         <div className="hidden md:flex xl:ml-[116px]">
-          <ul className="flex items-center gap-[35px] xl:gap-[120px] text-[14px] lg:text-[20px] leading-[17px] xl:leading-6 font-bold">
+          <ul className="flex items-center gap-[35px] lg:gap-[100px] xl:gap-[120px] text-[14px] lg:text-[20px] leading-[17px] xl:leading-6 font-bold">
             {navLinks.map((link) => (
               <li key={link.name}>
                 <Link
