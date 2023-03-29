@@ -40,7 +40,7 @@ const Navbar = () => {
                   duration={650}
                   delay={0}
                   to={link.href}
-                  offset={isBigScreen ? -300 : isDesktop ? -200 : -130}
+                  offset={isBigScreen ? -350 : isDesktop ? -200 : -130}
                 >
                   {link.name}
                 </Link>
