@@ -78,7 +78,7 @@ const Home = () => {
   ];
 
   return (
-    <main id="home" className="pt-[160px] xl:pt-[170px]">
+    <main id="home" className="pt-[160px] lg:pt-[170px]">
       {isMobile ? (
         <div>
           <Carousel width="350px" height="350px" array={slidesMobile} />
