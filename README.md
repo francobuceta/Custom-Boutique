@@ -4,7 +4,7 @@ Este proyecto es un sitio web desarrollado para la tienda de indumentaria femeni
 
 Deploy: [Custom Boutique](https://customboutique.com.ar/)
 
-![](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMjMyNmRhMDlmMDhmN2VlMjZiNDQ4ZmQyMTcwNDZhZmEwZjQ4Y2JkOCZjdD1n/4LeDrVcSeqFcPBrqmO/giphy.gif)
+![](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZTk2YThjMjg5ODdhNjU3MGY3MGU4ZDc0N2ZmNTBhYTcxMzU0NTJkOCZjdD1n/WXGpD7yY4e1lWgyvKo/giphy.gif)
 
 El sitio es una one page que cuenta con carruseles de imágenes de la ropa que ofrece Custom Boutique, una sección del feed de su cuenta en Instagram, otra sección con información sobre las promociones que se ofrecen, y una sección de contacto con imágen del local e información de las distintas vías para comunicarse.
 
