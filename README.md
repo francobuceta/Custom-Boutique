@@ -2,7 +2,7 @@
 
 Este proyecto es un sitio web desarrollado para la tienda de indumentaria femenina "Custom Boutique". Se trata de una landing page donde se pueden visualizar productos, obtener información del negocio y como contactarse.
 
-Deploy: [Custom Boutique](https://customboutique.com.ar/)
+Deploy: [Custom Boutique](https://custom-boutique.netlify.app/)
 
 ![](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZTk2YThjMjg5ODdhNjU3MGY3MGU4ZDc0N2ZmNTBhYTcxMzU0NTJkOCZjdD1n/WXGpD7yY4e1lWgyvKo/giphy.gif)
 
